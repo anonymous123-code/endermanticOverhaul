@@ -3,23 +3,23 @@
   "id": "endermantic_overhaul",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Endermantic Overhaul",
+  "description": "This mod allows better control over endermen using redstone",
   "authors": [
-    "Me!"
+    "anonymous123-code"
   ],
   "contact": {
     "homepage": "https://anonymous123-code.github.io/",
     "sources": "https://github.com/anonymous123-code/endermanticOverhaul"
   },
 
-  "license": "CC0-1.0",
+  "license": "LGPL",
   "icon": "assets/endermantic_overhaul/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.anonymous123_code.ExampleMod"
+      "io.github.anonymous123_code.endermantic_overhaul.EndermanticOverhaulMod"
     ]
   },
 

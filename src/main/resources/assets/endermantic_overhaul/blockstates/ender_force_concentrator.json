@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north,": { "model": "endermantic_overhaul:block/ender_force_concentrator", "x":  90},
+    "facing=east":  { "model": "endermantic_overhaul:block/ender_force_concentrator", "y":  90, "x":  90},
+    "facing=south": { "model": "endermantic_overhaul:block/ender_force_concentrator", "y": 180, "x":  90},
+    "facing=west":  { "model": "endermantic_overhaul:block/ender_force_concentrator", "y": 270, "x":  90},
+    "facing=up":  { "model": "endermantic_overhaul:block/ender_force_concentrator"},
+    "facing=down": { "model": "endermantic_overhaul:block/ender_force_concentrator", "x": 180}
+  }
+}
