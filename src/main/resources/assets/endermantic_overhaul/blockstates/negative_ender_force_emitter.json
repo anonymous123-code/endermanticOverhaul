@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north,": { "model": "endermantic_overhaul:block/negative_ender_force_emitter", "x":  90},
+    "facing=east":  { "model": "endermantic_overhaul:block/negative_ender_force_emitter", "y":  90, "x":  90},
+    "facing=south": { "model": "endermantic_overhaul:block/negative_ender_force_emitter", "y": 180, "x":  90},
+    "facing=west":  { "model": "endermantic_overhaul:block/negative_ender_force_emitter", "y": 270, "x":  90},
+    "facing=up":  { "model": "endermantic_overhaul:block/negative_ender_force_emitter"},
+    "facing=down": { "model": "endermantic_overhaul:block/negative_ender_force_emitter", "x": 180}
+  }
+}
