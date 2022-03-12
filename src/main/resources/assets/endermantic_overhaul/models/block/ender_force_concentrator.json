@@ -1,5 +1,5 @@
 {
-	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "endermantic_overhaul:block/ender_force_concentrator",
@@ -18,12 +18,5 @@
 				"down": {"uv": [8, 0, 4, 4], "texture": "#0"}
 			}
 		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [-39, 0, 0],
-			"translation": [0, 1.5, 0],
-			"scale": [0.27, 0.27, 0.27]
-		}
-	}
+	]
 }
