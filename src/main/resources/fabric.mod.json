@@ -22,6 +22,9 @@
       "io.github.anonymous123_code.endermantic_overhaul.EndermanticOverhaulMod"
     ]
   },
+  "mixins": [
+    "endermantic_overhaul.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.13.3",
