@@ -7,7 +7,7 @@ A mod about controlling endermen
 ### Ender Force Concentrator:
 
 - Forces Endermen to teleport to facing block when activated via Redstone
-- Recipe(Tbd):
+- Recipe:
 
 | Ender pearl |  Iron Bars   | Ender pearl |
 |:-----------:|:------------:|:-----------:|
