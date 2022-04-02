@@ -18,7 +18,7 @@ A mod about controlling endermen
 
 - Forces Endermen to place a Block at the Facing position whe activated via Redstone
 - Planned for 1.19 (=>Tbd): Consumes 1 Sculk charge per block
-- Recipe(Tbd):
+- Recipe:
     - Converted from Ender Force Concentrator when placed (unforced) by an Enderman in the Nether
 
 ### Dispenser Behavior:

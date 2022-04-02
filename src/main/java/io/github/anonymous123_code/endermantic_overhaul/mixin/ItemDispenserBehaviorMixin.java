@@ -1,6 +1,5 @@
 package io.github.anonymous123_code.endermantic_overhaul.mixin;
 
-import io.github.anonymous123_code.endermantic_overhaul.EndermanticOverhaulMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -42,7 +41,6 @@ public class ItemDispenserBehaviorMixin {
         NbtCompound blockEntityNbt = BlockItem.getBlockEntityNbt(stack);
         if(blockEntityNbt != null) return;
 
-        EndermanticOverhaulMod.LOGGER.info("item valid");
 
         Direction facing = blockState.get(DispenserBlock.FACING);
         BlockPos targetPos = pointer.getPos().offset(facing);
