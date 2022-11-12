@@ -38,7 +38,7 @@ public class ItemDispenserBehaviorMixin {
         if (!blockState.getBlock().equals(Blocks.DISPENSER)) return;
 
         // TODO Enderman doesn't handle Blockentities, the default Blocks should work, filled shulker boxes won't work
-        NbtCompound blockEntityNbt = BlockItem.getBlockEntityNbt(stack);
+        NbtCompound blockEntityNbt = BlockItem.getBlockEntityNbtFromStack(stack);
         if(blockEntityNbt != null) return;
 
 

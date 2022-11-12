@@ -53,10 +53,10 @@ public class EnderForceConcentratorBlock extends FacingBlock {
             if (powered != state.get(POWERED)) {
                 if (powered) {
                     BlockPos facingBlock = pos.offset(state.get(FACING), 1);
-                    List<EndermanEntity> endermen = world.getEntitiesByClass(EndermanEntity.class, new Box(facingBlock.add(8, 8, 8), facingBlock.add(-8, -8, -8)), endermanEntity -> facingBlock.isWithinDistance(endermanEntity.getPos(), 8) && !endermanEntity.isAiDisabled() && !endermanEntity.isDead());
+                    List<EndermanEntity> endermen = world.getEntitiesByClass(EndermanEntity.class, new Box(facingBlock.add(8, 8, 8), facingBlock.add(-8, -8, -8)), endermanEntity -> facingBlock.isWithinDistance(endermanEntity.getBlockPos(), 8) && !endermanEntity.isAiDisabled() && !endermanEntity.isDead());
                     endermen.forEach((EndermanEntity e) -> {
-                        boolean teleportSuccesful = e.teleport(facingBlock.getX() + 0.5, facingBlock.getY(), facingBlock.getZ() + 0.5,true);
-                        if (teleportSuccesful && !e.isSilent()) {
+                        boolean teleportSuccessful = e.teleport(facingBlock.getX() + 0.5, facingBlock.getY(), facingBlock.getZ() + 0.5,true);
+                        if (teleportSuccessful && !e.isSilent()) {
                             world.playSound(null, e.prevX, e.prevY, e.prevZ, SoundEvents.ENTITY_ENDERMAN_TELEPORT, e.getSoundCategory(), 1.0f, 1.0f);
                             e.playSound(SoundEvents.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
                         }
