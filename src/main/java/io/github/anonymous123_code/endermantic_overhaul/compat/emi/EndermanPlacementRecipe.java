@@ -1,8 +1,5 @@
 package io.github.anonymous123_code.endermantic_overhaul.compat.emi;
 
-import com.ibm.icu.text.BidiTransform;
-import dev.emi.emi.EmiPort;
-import dev.emi.emi.api.EmiApi;
 import dev.emi.emi.api.recipe.EmiRecipe;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.render.EmiTexture;
@@ -19,6 +16,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 //TODO: Unhardcode
+/**
+ * @author anonymous123-code
+ */
 public class EndermanPlacementRecipe implements EmiRecipe {
     private OrderedText text = Text.translatable("predicate.endermantic_overhaul.negative_ender_force_emitter_crafting").asOrderedText();
 
