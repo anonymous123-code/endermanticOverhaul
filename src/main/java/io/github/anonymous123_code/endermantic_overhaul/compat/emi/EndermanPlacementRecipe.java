@@ -7,6 +7,8 @@ import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
 import io.github.anonymous123_code.endermantic_overhaul.EndermanticOverhaulMod;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
@@ -15,10 +17,12 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
+
 //TODO: Unhardcode
 /**
  * @author anonymous123-code
  */
+@Environment(EnvType.CLIENT)
 public class EndermanPlacementRecipe implements EmiRecipe {
     private OrderedText text = Text.translatable("predicate.endermantic_overhaul.negative_ender_force_emitter_crafting").asOrderedText();
 
