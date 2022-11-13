@@ -17,5 +17,7 @@ public class EndermanticOverhaulEmiPlugin implements EmiPlugin {
         registry.addCategory(ENDERMAN_PLACEMENT_CATEGORY);
 
         registry.addWorkstation(ENDERMAN_PLACEMENT_CATEGORY, ENDERMAN_PLACEMENT_WORKSTATION);
+
+        registry.addRecipe(new EndermanPlacementRecipe());
     }
 }
