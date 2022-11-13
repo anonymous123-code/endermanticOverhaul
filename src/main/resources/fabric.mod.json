@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "io.github.anonymous123_code.endermantic_overhaul.EndermanticOverhaulMod"
+    ],
+    "emi": [
+      "io.github.anonymous123_code.endermantic_overhaul.compat.emi.EndermanticOverhaulEmiPlugin"
     ]
   },
   "mixins": [
