@@ -1,0 +1,6 @@
+{
+  "recipes": [
+    "endermantic_overhaul:/enderman_placement/negative_ender_force_emitter",
+    "endermantic_overhaul:ender_force_concentrator"
+  ]
+}
