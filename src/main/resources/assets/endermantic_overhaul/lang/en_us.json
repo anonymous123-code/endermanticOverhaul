@@ -1,4 +1,8 @@
 {
   "block.endermantic_overhaul.ender_force_concentrator": "Ender Force Concentrator",
-  "block.endermantic_overhaul.negative_ender_force_emitter": "Negative Ender Force Emitter"
+  "block.endermantic_overhaul.negative_ender_force_emitter": "Negative Ender Force Emitter",
+
+  "predicate.endermantic_overhaul.negative_ender_force_emitter_crafting": "Must be in the Nether",
+
+  "emi.category.endermantic_overhaul.enderman_placement": "Placed by Entity"
 }
