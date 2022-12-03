@@ -30,7 +30,7 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation libs.quilted.fabric.api
-	modImplementation libs.emi
+	modApi libs.emi
 }
 
 processResources {

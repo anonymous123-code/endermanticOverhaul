@@ -22,7 +22,7 @@ public class PlaceBlockGoalMixin {
     @Shadow @Final private EndermanEntity enderman;
 
     @ModifyArg(method = "tick()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/Block;postProcessState(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/WorldAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState;"))
-    public BlockState placementRecipeCheck(BlockState state, WorldAccess world, BlockPos pos) {
+    public BlockState endermanticOverhaul$placementRecipeCheck(BlockState state, WorldAccess world, BlockPos pos) {
         if(state.isOf(EndermanticOverhaulMod.ENDER_FORCE_CONCENTRATOR)) {
             if(this.enderman.world.getRegistryKey().equals(World.NETHER)) {
                 return EndermanticOverhaulMod.NEGATIVE_ENDER_FORCE_EMITTER.getDefaultState().with(Properties.POWERED, state.get(Properties.POWERED)).with(Properties.FACING, state.get(Properties.FACING));

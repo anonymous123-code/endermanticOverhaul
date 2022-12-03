@@ -31,7 +31,7 @@ import java.util.List;
 @Mixin(ItemDispenserBehavior.class)
 public class ItemDispenserBehaviorMixin {
     @Inject(method = "dispenseSilently", at = @At("HEAD"), cancellable = true)
-    private void injectDispenseSilently(BlockPointer pointer, ItemStack stack, CallbackInfoReturnable<ItemStack> cir) {
+    private void endermanticOverhaul$injectDispenseSilently(BlockPointer pointer, ItemStack stack, CallbackInfoReturnable<ItemStack> cir) {
         if (!(stack.getItem() instanceof BlockItem)) return;
 
         BlockState blockState = pointer.getBlockState();
