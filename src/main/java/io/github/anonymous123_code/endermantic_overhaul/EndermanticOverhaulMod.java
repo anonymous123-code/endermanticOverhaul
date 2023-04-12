@@ -4,13 +4,15 @@ import io.github.anonymous123_code.endermantic_overhaul.blocks.EnderForceConcent
 import io.github.anonymous123_code.endermantic_overhaul.blocks.NegativeEnderForceEmitterBlock;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,10 +29,15 @@ public class EndermanticOverhaulMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		Registry.register(Registry.BLOCK, new Identifier("endermantic_overhaul", "ender_force_concentrator"), ENDER_FORCE_CONCENTRATOR);
-		Registry.register(Registry.ITEM, new Identifier("endermantic_overhaul", "ender_force_concentrator"), new BlockItem(ENDER_FORCE_CONCENTRATOR, new FabricItemSettings().group(ItemGroup.REDSTONE)));
+		Registry.register(Registries.BLOCK, new Identifier("endermantic_overhaul", "ender_force_concentrator"), ENDER_FORCE_CONCENTRATOR);
+		Registry.register(Registries.ITEM, new Identifier("endermantic_overhaul", "ender_force_concentrator"), new BlockItem(ENDER_FORCE_CONCENTRATOR, new FabricItemSettings()));
 
-		Registry.register(Registry.BLOCK, new Identifier("endermantic_overhaul", "negative_ender_force_emitter"), NEGATIVE_ENDER_FORCE_EMITTER);
-		Registry.register(Registry.ITEM, new Identifier("endermantic_overhaul", "negative_ender_force_emitter"), new BlockItem(NEGATIVE_ENDER_FORCE_EMITTER, new FabricItemSettings().group(ItemGroup.REDSTONE)));
+		Registry.register(Registries.BLOCK, new Identifier("endermantic_overhaul", "negative_ender_force_emitter"), NEGATIVE_ENDER_FORCE_EMITTER);
+		Registry.register(Registries.ITEM, new Identifier("endermantic_overhaul", "negative_ender_force_emitter"), new BlockItem(NEGATIVE_ENDER_FORCE_EMITTER, new FabricItemSettings()));
+
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE_BLOCKS).register(entries -> {
+			entries.addStack(ENDER_FORCE_CONCENTRATOR.asItem().getDefaultStack());
+			entries.addStack(NEGATIVE_ENDER_FORCE_EMITTER.asItem().getDefaultStack());
+		});
 	}
 }
