@@ -1,0 +1,12 @@
+name: validate
+
+on: [push, workflow_dispatch]
+
+jobs:
+  validate:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
+      - name: validate gradle wrapper
+        uses: gradle/wrapper-validation-action@v1
