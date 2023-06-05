@@ -23,6 +23,9 @@ jobs:
       - name: build
         run: ./gradlew build
 
+      - name: test
+        run: ./gradlew check
+
       - name: publish
         uses: Kir-Antipov/mc-publish@v3.3
         with:
