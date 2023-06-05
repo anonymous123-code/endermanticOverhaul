@@ -1,7 +1,0 @@
-on: push
-jobs:
-  a:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: checkout repository
-        uses: actions/checkout@v3
