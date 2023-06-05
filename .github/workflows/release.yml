@@ -1,5 +1,11 @@
 name: release
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      changelog:
+        required: true
+        description: The changelog of the version
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -25,5 +31,7 @@ jobs:
           modrinth-id: PxIvFRZv
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           modrinth-featured: false
+
+          changelog: ${{inputs.changelog}}
 
           github-token: ${{ secrets.GITHUB_TOKEN }}
