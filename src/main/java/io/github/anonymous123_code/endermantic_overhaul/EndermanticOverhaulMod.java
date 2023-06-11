@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -21,8 +20,8 @@ public class EndermanticOverhaulMod implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("endermantic_overhaul");
-	public static final Block ENDER_FORCE_CONCENTRATOR = new EnderForceConcentratorBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(4.0f));
-	public static final Block NEGATIVE_ENDER_FORCE_EMITTER = new NegativeEnderForceEmitterBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(4));
+	public static final Block ENDER_FORCE_CONCENTRATOR = new EnderForceConcentratorBlock(FabricBlockSettings.create().requiresTool().strength(4.0f));
+	public static final Block NEGATIVE_ENDER_FORCE_EMITTER = new NegativeEnderForceEmitterBlock(FabricBlockSettings.create().requiresTool().strength(4));
 
 	@Override
 	public void onInitialize() {
